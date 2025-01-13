@@ -114,15 +114,15 @@ html, body {
       font-size: 1.5rem;
     }
     p {
-      font-size: 1.1rem;
+      font-size: 1.0rem;
     }
     .social-block {
       left: 20px;
       bottom: 20px;
     }
     .social-icons a img {
-      width: 60px;
-      height: 60px;
+      width: 55px;
+      height: 55px;
     }
   }
   
