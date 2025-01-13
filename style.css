@@ -1,0 +1,128 @@
+/* Reset base margins, background design */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: "Blinker", serif;
+    font-weight: 400;
+    background: #f5f6fa;
+  }
+  
+  /* 
+    Block with text (FOREGROUND).
+    pointer-events: none => clicks "pass" through the block (to draw underneath it),
+    user-select: none => Prohibit highlighting text.
+  */
+  .content {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 50px;
+    pointer-events: none;
+    user-select: none;
+  }
+  
+  /* Links within content remain clickable */
+  .content a {
+    pointer-events: auto;
+  }
+  
+  /* Headings and paragraphs */
+  h1 {
+    font-family: "Blinker", serif;
+    font-weight: 400;
+    font-size: 2rem;
+    margin: 0 0 10px;
+    color: #000000;
+  }
+  
+  h2 {
+    font-family: "Blinker", serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    margin: 0 0 15px;
+    color: #000000;
+  }
+  
+  p {
+    padding-top: 20px;
+    margin: 0 0 20px;
+    max-width: 600px;
+    line-height: 1.4;
+    color: #000000;
+  }
+  
+  /* 
+    Social media block
+    pointer-events: none => so that the icons don't interfere with drawing,
+    and the link will be inside pointer-events: auto.
+  */
+  .social-block {
+    position: fixed;
+    left: 50px;
+    bottom: 50px;
+    z-index: 10;
+    pointer-events: none; /* «transparent» for clics */
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  /* Social icons links */
+  .social-icons a {
+    pointer-events: auto;
+  }
+  
+  .social-icons a img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 0%;
+  }
+  
+  /* 
+    Canvas
+    pointer-events: auto => catching event on hte canvas (mousedown etc.)
+  */
+  canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: auto;
+  }
+  
+  /* 
+    Adaptation for mobile
+  */
+  @media (max-width: 600px) {
+    .content {
+      padding: 20px;
+    }
+    h1 {
+      font-size: 4rem;
+    }
+    h2 {
+      font-size: 2.0rem;
+    }
+    p {
+      font-size: 1.5rem;
+    }
+    .social-block {
+      left: 20px;
+      bottom: 20px;
+    }
+    .social-icons a img {
+      width: 80px;
+      height: 80px;
+    }
+  }
+  
