@@ -108,21 +108,21 @@ html, body {
       padding: 20px;
     }
     h1 {
-      font-size: 4rem;
+      font-size: 2.8rem;
     }
     h2 {
-      font-size: 2.0rem;
+      font-size: 1.8rem;
     }
     p {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
     }
     .social-block {
       left: 20px;
       bottom: 20px;
     }
     .social-icons a img {
-      width: 80px;
-      height: 80px;
+      width: 60px;
+      height: 60px;
     }
   }
   
