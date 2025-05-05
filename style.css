@@ -1,3 +1,12 @@
+/* ...existing code... */
+@font-face {
+  font-family: 'Doppelganger';
+  src: url('fonts/Doppelganger\ Display.woff2') format('woff2'),
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Akatab:wght@400;500;600;700;800;900&display=swap');
+
+
 /* Reset base margins, background design */
 html, body {
     margin: 0;
@@ -7,9 +16,9 @@ html, body {
     overflow: hidden;
     font-family: "Blinker", serif;
     font-weight: 400;
-    background: #f5f6fa;
+    background: #FCFBF5;
   }
-  
+
   /* 
     Block with text (FOREGROUND).
     pointer-events: none => clicks "pass" through the block (to draw underneath it),
@@ -33,27 +42,34 @@ html, body {
   
   /* Headings and paragraphs */
   h1 {
-    font-family: "Blinker", serif;
+    font-family: "Doppelganger", serif;
     font-weight: 400;
-    font-size: 2rem;
+    font-size: 7rem;
     margin: 0 0 10px;
-    color: #000000;
+    color: #693825;
   }
   
+  .upperframe {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: nowrap;
+    gap: 30px;
+  }
+
   h2 {
-    font-family: "Blinker", serif;
+    font-family: "Doppelganger", serif;
     font-weight: 400;
-    font-size: 1.4rem;
-    margin: 0 0 15px;
-    color: #000000;
+    font-size: 3.3125rem;
+    margin: 35px 0 15px;
+    color: #693825;
   }
   
-  p {
-    padding-top: 20px;
-    margin: 0 0 20px;
-    max-width: 600px;
+  .description {
+    font-family: "Akatab", sans-serif;
+    max-width: 400px;
     line-height: 1.4;
-    color: #000000;
+    color: #979594;
   }
   
   /* 
@@ -63,12 +79,19 @@ html, body {
   */
   .social-block {
     position: fixed;
-    left: 50px;
     bottom: 50px;
     z-index: 10;
-    pointer-events: none; /* «transparent» for clics */
+    pointer-events: none;
   }
   
+  .social-block.left {
+    left: 50px;
+  }
+  
+  .social-block.right {
+    right: 50px;
+  }
+
   .social-icons {
     display: flex;
     gap: 10px;
@@ -80,12 +103,25 @@ html, body {
   }
   
   .social-icons a img {
-    width: 40px;
-    height: 40px;
+    width: 58px;
+    height: 58px;
     object-fit: cover;
-    border-radius: 0%;
+    transition: transform 0.3s ease;
   }
   
+  .refresh-icon img {
+    width: 58px;
+    height: 58px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .refresh-icon:hover img {
+    transform: rotate(180deg);
+  }
+
+
   /* 
     Canvas
     pointer-events: auto => catching event on hte canvas (mousedown etc.)
@@ -100,29 +136,40 @@ html, body {
     pointer-events: auto;
   }
   
-  /* 
-    Adaptation for mobile
-  */
-  @media (max-width: 600px) {
-    .content {
-      padding: 20px;
-    }
-    h1 {
-      font-size: 2.4rem;
-    }
-    h2 {
-      font-size: 1.5rem;
-    }
-    p {
-      font-size: 1.0rem;
-    }
-    .social-block {
-      left: 20px;
-      bottom: 20px;
-    }
-    .social-icons a img {
-      width: 55px;
-      height: 55px;
-    }
+  /* Адаптивное уменьшение шрифта на средних экранах */
+@media (max-width: 1200px) {
+  h1 {
+    font-size: 7rem;
   }
+  h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  h1 {
+    font-size: 5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Мобильная версия: вертикальное расположение и выравнивание */
+@media (max-width: 600px) {
+  .upperframe {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  h1 {
+    font-size: 4.4rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    margin-top: 0.5rem;
+  }
+}
   
