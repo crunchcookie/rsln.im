@@ -95,8 +95,16 @@ const brush = new Brush();
 
 // Fitting canvas to window
 function resize() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
+  const dpr = window.devicePixelRatio || 1;
+
+  canvas.width = window.innerWidth * dpr;
+  canvas.height = window.innerHeight * dpr;
+
+  canvas.style.width = window.innerWidth + 'px';
+  canvas.style.height = window.innerHeight + 'px';
+
+  ctx.setTransform(1, 0, 0, 1, 0, 0); // сброс трансформаций
+  ctx.scale(dpr, dpr); // масштабируем обратно
 }
 window.addEventListener('resize', resize);
 resize();

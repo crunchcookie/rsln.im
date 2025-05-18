@@ -16,7 +16,7 @@ html, body {
     overflow: hidden;
     font-family: "Blinker", serif;
     font-weight: 400;
-    background: #FCFBF5;
+    background: #F2F5F8;
   }
 
   /* 
@@ -46,7 +46,7 @@ html, body {
     font-weight: 400;
     font-size: 7rem;
     margin: 0 0 10px;
-    color: #693825;
+    color: #000000;
   }
   
   .upperframe {
@@ -62,14 +62,14 @@ html, body {
     font-weight: 400;
     font-size: 3.3125rem;
     margin: 35px 0 15px;
-    color: #693825;
+    color: #000000;
   }
   
   .description {
     font-family: "Akatab", sans-serif;
     max-width: 370px;
     line-height: 1.4;
-    color: #979594;
+    color: #949597;
   }
   
   /* 
@@ -148,7 +148,7 @@ html, body {
 
 @media (max-width: 900px) {
   h1 {
-    font-size: 5rem;
+    font-size: 4.5rem;
   }
   h2 {
     font-size: 2rem;
@@ -169,7 +169,7 @@ html, body {
 
   h2 {
     font-size: 2.5rem;
-    margin-top: 0.5rem;
+    margin-top: 0.1rem;
   }
 
   .social-icons a img {
@@ -190,15 +190,22 @@ html, body {
 
   .social-block.left {
     left: 20px;
+    bottom: 20px;
   }
   
   .social-block.right {
     right: 20px;
+    bottom: 20px;
   }
 
+  .description {
+  font-family: "Akatab", sans-serif;
+  font-size: 0.9rem;
+  color: #000000;
+}
 
   .content {
-    padding: 50px 20px 20px 20px;
+    padding: 20px 20px 20px 20px;
   }
 
 }
