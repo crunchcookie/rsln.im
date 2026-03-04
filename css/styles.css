@@ -463,12 +463,14 @@ body.loaded .h-photo         { transform: scale(1) rotate(0); opacity: 1; }
   #work { padding: 2rem 1.2rem 3rem; }
   .work-grid { grid-template-columns: 1fr; gap: .8rem; }
 
-  .proj-card { grid-template-columns: 1fr; grid-template-rows: auto auto; padding: 5rem 1.5rem 1.5rem; gap: 1rem; align-content: start; }
-  .proj-img-wrap { order: -1; height: 52vw; aspect-ratio: unset; max-height: none; }
+  .proj-card { grid-template-columns: 1fr; grid-template-rows: auto auto; padding: 10rem 1.5rem 1.5rem; gap: 1rem; align-content: start; }
+  /* .proj-img-wrap { order: -1; height: 52vw; aspect-ratio: unset; max-height: none; } */
+  .proj-img-wrap { order: -1; aspect-ratio: 1/1; height: auto; max-height: none; width: 100%; }
+  
   .proj-info { order: 1; align-self: start; }
   .proj-name { font-size: clamp(2rem, 7vw, 3.2rem); }
-  .proj-hd   { top: 1rem; left: 1.5rem; right: 1.5rem; z-index: 20; }
-  .proj-section-ttl { font-size: clamp(1.4rem, 6vw, 2rem); color: rgba(255,255,255,.7); }
+  .proj-hd   { top: 6.2rem; left: 1.5rem; right: 1.5rem; z-index: 20; }
+  .proj-section-ttl { font-size: clamp(1rem, 5vw, 1.4rem); color: rgba(0,0,0,.3); }
   .proj-hint { bottom: 1rem; right: 1.5rem; }
 
   .proj-page { grid-template-columns: 1fr; }
