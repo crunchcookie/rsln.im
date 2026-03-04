@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Print Media — Ruslan Nalbantov</title>
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../../css/styles.css"/>
+</head>
+
+<body>
+
+<!-- Оверлей для плавного перехода между страницами (не трогать) -->
+<div id="page-transition"></div>
+
+<!-- Прогресс-бар скролла (не трогать) -->
+<div id="prog"></div>
+
+<!-- Кастомный курсор (не трогать) -->
+<div id="cur-o"></div>
+<div id="cur-d"></div>
+<div id="cur-lbl">VIEW</div>
+
+<!-- Мобильное меню — пункты можно менять -->
+<div class="mob-menu" id="mob-menu">
+  <a href="#first_photo"        class="mob-link">Home</a>
+  <a href="#contact" class="mob-link">Contact</a>
+</div>
+
+<!-- Навбар -->
+<nav id="nav">
+  <!-- Лого — всегда ведёт на главную -->
+  <a href="/" class="nav-logo">rsln<span>.</span>im</a>
+  <ul class="nav-menu" id="nav-menu">
+    <li><a href="#first_photo">Home</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span>
+  </button>
+</nav>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     ОСНОВНОЙ ГРИД: левая колонка — фото, правая — сайдбар
+     Сайдбар прилипает к верху пока скроллишь фото,
+     и отлипает когда доходишь до секции Contact ниже.
+═══════════════════════════════════════════════════════════ -->
+<div class="proj-page">
+
+  <!-- ═══ ЛЕВАЯ КОЛОНКА — ФОТОГРАФИИ ПРОЕКТА ═══════════════
+       Добавляй фото в этот блок.
+       Каждое фото оборачивай в <div class="proj-img-item">.
+       Первое фото: loading="eager" (загружается сразу).
+       Все остальные: loading="lazy" (ленивая загрузка).
+       Путь к файлу: images/имя_файла.jpg
+  ════════════════════════════════════════════════════════ -->
+  <div class="proj-images">
+
+    <!-- ФОТО 1 — первое фото, грузится сразу -->
+    <div class="proj-img-item" id="first_photo">
+      <img src="images/1.jpg" alt="" loading="eager"/>
+    </div>
+
+    <!-- ФОТО 2 -->
+    <div class="proj-img-item">
+      <img src="images/2.jpg" alt="" loading="lazy"/>
+    </div>
+
+    <!-- ФОТО 3 -->
+    <div class="proj-img-item">
+      <img src="images/3.jpg" alt="" loading="lazy"/>
+    </div>
+
+        <!-- ФОТО 4 -->
+    <div class="proj-img-item">
+      <img src="images/4.jpg" alt="" loading="lazy"/>
+    </div>
+
+        <!-- ФОТО 5 -->
+    <div class="proj-img-item">
+      <img src="images/5.jpg" alt="" loading="lazy"/>
+    </div>
+
+        <!-- ФОТО 6 -->
+    <div class="proj-img-item">
+      <img src="images/6.jpg" alt="" loading="lazy"/>
+    </div>
+ 
+        <!-- ФОТО 7 -->
+    <div class="proj-img-item">
+      <img src="images/7.jpg" alt="" loading="lazy"/>
+    </div>
+
+    <!-- ↑↑↑ КОНЕЦ ЗОНЫ ФОТО ↑↑↑ --> 
+
+  </div>
+  <!-- /proj-images -->
+
+
+  <!-- ═══ ПРАВАЯ КОЛОНКА — САЙДБАР (прилипающий) ══════════
+       Редактируй текст внутри, структуру не трогай.
+  ════════════════════════════════════════════════════════ -->
+  <div class="proj-sidebar">
+
+    <!-- Теги проекта — добавляй/убирай <em> по необходимости -->
+    <div class="proj-tags">
+      <em>Editorial design</em>
+      <em>Print</em>
+    </div>
+
+    <!-- Название проекта -->
+    <h1 class="proj-title">Crimean Magazine</h1>
+
+    <!-- Описание проекта -->
+    <p class="proj-desc">
+      Editorial layout and production for a magazine covering tourism, history, people, food, and business. Grid-based spreads, clean typography, and consistent visual rhythm across articles — prepared as print-ready pages.
+    </p>
+
+    <!-- Мета-данные: клиент, год, услуги -->
+    <div class="proj-meta">
+      <!-- <div class="meta-row">
+        <p class="meta-label">Client</p>
+        <p class="meta-value">Greenwood Development</p>
+      </div> -->
+      <div class="meta-row">
+        <p class="meta-label">Year</p>
+        <p class="meta-value">2018</p>
+      </div>
+      <div class="meta-row">
+        <p class="meta-label">Services</p>
+        <p class="meta-value">Layout design · Preprint</p>
+      </div>
+    </div>
+
+    <!-- Ссылка на сайт / Behance / etc. Удали весь блок если не нужна. -->
+    <!-- <a href="https://aristocrat.house/" target="_blank" rel="noopener" class="proj-link">
+      Visit project <span class="proj-link-arr">↗︎</span>
+    </a> -->
+
+  </div>
+  <!-- /proj-sidebar -->
+
+</div>
+<!-- /proj-page — сайдбар отлипает здесь, дальше идёт Contact -->
+
+
+<!-- ═══ CONTACT — вне грида, сайдбар естественно отлипает ═══ -->
+<section id="contact">
+  <p class="ct-tag sr">THANK YOU FOR VISITING</p>
+  <div class="ct-gif sr d1">
+    <img src="../../images/heart_animation.gif" alt="" width="90"/>
+  </div>
+  <div class="ct-h sr d2">
+    Get in touch
+    <em>with me</em>
+  </div>
+  <a href="mailto:hello@rsln.im" class="ct-email sr d3">hello@rsln.im</a>
+  <div class="ct-socials sr d4">
+    <a href="https://www.behance.net/rsln" target="_blank" class="ct-soc"><img src="../../images/behance.svg" width="18" alt="Behance"/></a>
+    <a href="https://www.instagram.com/rsln.im/" target="_blank" class="ct-soc"><img src="../../images/instagram.svg" width="18" alt="Instagram"/></a>
+    <a href="https://www.linkedin.com/in/ruslan-nalbantov/" target="_blank" class="ct-soc"><img src="../../images/linkedin.svg" width="18" alt="LinkedIn"/></a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 Ruslan Nalbantov</p>
+  <p>Graphic Designer</p>
+  <p>rsln.im</p>
+</footer>
+
+<script src="../../js/scripts.js"></script>
+</body>
+</html>
