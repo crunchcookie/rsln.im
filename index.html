@@ -19,14 +19,14 @@
   <link rel="stylesheet" href="css/styles.css"/>
   <script>
     (function () {
-      var saved = localStorage.getItem('rsln_lang');
-      if (saved === 'ru') { window.location.replace('/ru/'); return; }
-      if (saved === 'de') { window.location.replace('/de/'); return; }
-      fetch('https://ipapi.co/json/')
+      if (localStorage.getItem('rsln_lang') === 'de') { window.location.replace('/de/'); return; }
+      fetch('https://api.country.is/')
         .then(function (r) { return r.json(); })
         .then(function (d) {
-          if (d.country === 'RU') { localStorage.setItem('rsln_lang', 'ru'); window.location.replace('/ru/'); }
-          else if (d.country === 'DE' || d.country === 'AT' || d.country === 'CH') { localStorage.setItem('rsln_lang', 'de'); window.location.replace('/de/'); }
+          if (d.country === 'DE' || d.country === 'AT' || d.country === 'CH') {
+            localStorage.setItem('rsln_lang', 'de');
+            window.location.replace('/de/');
+          }
         })
         .catch(function () {});
     })();
