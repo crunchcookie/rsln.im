@@ -1,36 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ruslan Nalbantov — Graphic Designer</title>
-  <meta name="description" content="Ruslan Nalbantov — Graphic Designer based in Germany. Print, web and visual production."/>
+  <title>Ruslan Nalbantov — Grafikdesigner</title>
+  <meta name="description" content="Ruslan Nalbantov — Grafikdesigner in Deutschland. Print, Web und visuelle Produktion."/>
   <meta name="author" content="Ruslan Nalbantov"/>
   <!-- Open Graph -->
-  <meta property="og:title" content="Ruslan Nalbantov — Graphic Designer"/>
-  <meta property="og:description" content="Print, web and visual production."/>
+  <meta property="og:title" content="Ruslan Nalbantov — Grafikdesigner"/>
+  <meta property="og:description" content="Print, Web und visuelle Produktion."/>
   <meta property="og:image" content="https://rsln.im/images/og-preview.jpg"/>
-  <meta property="og:url" content="https://rsln.im/"/>
+  <meta property="og:url" content="https://rsln.im/de/"/>
   <meta property="og:type" content="website"/>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="css/styles.css"/>
-  <script>
-    (function () {
-      var saved = localStorage.getItem('rsln_lang');
-      if (saved === 'ru') { window.location.replace('/ru/'); return; }
-      if (saved === 'de') { window.location.replace('/de/'); return; }
-      fetch('https://ipapi.co/json/')
-        .then(function (r) { return r.json(); })
-        .then(function (d) {
-          if (d.country === 'RU') { localStorage.setItem('rsln_lang', 'ru'); window.location.replace('/ru/'); }
-          else if (d.country === 'DE' || d.country === 'AT' || d.country === 'CH') { localStorage.setItem('rsln_lang', 'de'); window.location.replace('/de/'); }
-        })
-        .catch(function () {});
-    })();
-  </script>
+  <link rel="stylesheet" href="../css/styles.css"/>
 </head>
 
 <body>
@@ -44,26 +30,26 @@
 <!-- Cursor -->
 <div id="cur-o"></div>
 <div id="cur-d"></div>
-<div id="cur-lbl">VIEW</div>
+<div id="cur-lbl">ANSEHEN</div>
 
 <!-- Mobile fullscreen menu -->
 <div class="mob-menu" id="mob-menu">
-  <a href="#hero"     class="mob-link">Home</a>
-  <a href="#work"     class="mob-link">Work</a>
-  <a href="#services" class="mob-link">Projects</a>
-  <a href="#contact"  class="mob-link">Contact</a>
+  <a href="#hero"     class="mob-link">Start</a>
+  <a href="#work"     class="mob-link">Arbeiten</a>
+  <a href="#services" class="mob-link">Projekte</a>
+  <a href="#contact"  class="mob-link">Kontakt</a>
 </div>
 
 <!-- NAV -->
 <nav id="nav">
-  <a href="/" class="nav-logo">rsln<span>.</span>im</a>
+  <a href="/de/" class="nav-logo">rsln<span>.</span>im</a>
   <ul class="nav-menu" id="nav-menu">
-    <li><a href="#hero">Home</a></li>
-    <li><a href="#work">Work</a></li>
-    <li><a href="#services">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#hero">Start</a></li>
+    <li><a href="#work">Arbeiten</a></li>
+    <li><a href="#services">Projekte</a></li>
+    <li><a href="#contact">Kontakt</a></li>
   </ul>
-  <button class="hamburger" id="hamburger" aria-label="Menu">
+  <button class="hamburger" id="hamburger" aria-label="Menü">
     <span></span><span></span>
   </button>
 </nav>
@@ -71,7 +57,7 @@
 <!-- HERO -->
 <section id="hero">
   <div class="h-photo-mobile">
-    <img src="images/photo.png" alt="Ruslan Nalbantov" loading="eager"/>
+    <img src="../images/photo.png" alt="Ruslan Nalbantov" loading="eager"/>
   </div>
   <div class="h-eyebrow">
     <div class="h-eyebrow-inner">Print &nbsp;·&nbsp; Web &nbsp;·&nbsp; Editorial</div>
@@ -79,21 +65,21 @@
   <div class="h-title-row">
     <div class="h-titles">
       <div class="h-word outline">
-        <span class="h-word-inner">GRAPHIC &hairsp;DESIGNER</span>
+        <span class="h-word-inner">GRAFIKDESIGNER</span>
       </div>
       <div class="h-word name">
         <span class="h-word-inner">RUSLAN &hairsp;NALBANTOV<span style="color:var(--ink)">.</span></span>
       </div>
     </div>
     <div class="h-photo">
-      <img src="images/photo.png" alt="Ruslan Nalbantov" loading="eager"/>
+      <img src="../images/photo.png" alt="Ruslan Nalbantov" loading="eager"/>
     </div>
   </div>
   <div class="h-bottom">
     <div class="h-desc">
       <div class="h-desc-inner">
-        I work across print, web and visual production — developing editorial projects,
-        real estate marketing materials and large-format layouts.
+        Ich arbeite in den Bereichen Print, Web und visuelle Produktion — von redaktionellen Projekten
+        über Immobilienmarketing bis hin zu Großformatgestaltung.
       </div>
     </div>
   </div>
@@ -102,32 +88,31 @@
 <!-- WORK GRID -->
 <section id="work">
   <div class="work-grid">
-    <a href="/works/branding/" class="wi view-trigger sr d1">
-      <img src="images/brand_design.jpg" alt="Branding" class="wi-img"/>
+    <a href="/de/works/branding/" class="wi view-trigger sr d1">
+      <img src="../images/brand_design.jpg" alt="Branding" class="wi-img"/>
       <div class="wi-ov"><div class="wi-info">
         <div class="wi-title">Branding <div class="wi-arr">↗︎</div></div>
-        <div class="wi-cat">Identity · Visual Systems</div>
+        <div class="wi-cat">Corporate Identity · Visuelle Systeme</div>
       </div></div>
     </a>
-    <a href="/works/print-media/" class="wi view-trigger sr d2">
-      <img src="images/print_design.jpg" alt="Print Media" class="wi-img"/>
+    <a href="/de/works/print-media/" class="wi view-trigger sr d2">
+      <img src="../images/print_design.jpg" alt="Printmedien" class="wi-img"/>
       <div class="wi-ov"><div class="wi-info">
-        <div class="wi-title">Print Media <div class="wi-arr">↗︎</div></div>
+        <div class="wi-title">Printmedien <div class="wi-arr">↗︎</div></div>
         <div class="wi-cat">Editorial · Layout</div>
       </div></div>
     </a>
-    <a href="/works/video/" class="wi view-trigger sr d3">
+    <a href="/de/works/video/" class="wi view-trigger sr d3">
       <video class="wi-img" autoplay muted loop playsinline preload="none">
-         <source src="images/video_animation.mp4" type="video/mp4"/>
+         <source src="../images/video_animation.mp4" type="video/mp4"/>
       </video>
-      <!-- <img src="images/video_animation.jpg" alt="Video & Animation" class="wi-img"/> -->
       <div class="wi-ov"><div class="wi-info">
         <div class="wi-title">Video &amp; Animation <div class="wi-arr">↗︎</div></div>
-        <div class="wi-cat">Motion · Direction</div>
+        <div class="wi-cat">Motion · Regie</div>
       </div></div>
     </a>
-    <a href="/works/webdesign/" class="wi view-trigger sr d4">
-      <img src="images/webdesign.jpg" alt="Webdesign" class="wi-img"/>
+    <a href="/de/works/webdesign/" class="wi view-trigger sr d4">
+      <img src="../images/webdesign.jpg" alt="Webdesign" class="wi-img"/>
       <div class="wi-ov"><div class="wi-info">
         <div class="wi-title">Webdesign <div class="wi-arr">↗︎</div></div>
         <div class="wi-cat">UI/UX · Prototyping</div>
@@ -164,7 +149,7 @@
     <div class="proj-sticky">
 
       <div class="proj-hd">
-        <span class="proj-section-ttl">SELECTED WORKS</span>
+        <span class="proj-section-ttl">AUSGEWÄHLTE ARBEITEN</span>
         <span class="proj-counter" id="proj-counter">01 / 04</span>
       </div>
 
@@ -173,32 +158,32 @@
 
           <div class="proj-card">
             <div class="proj-info">
-              <div class="proj-tags"><span>Brand Identity</span></div>
+              <div class="proj-tags"><span>Corporate Identity</span></div>
               <h3 class="proj-name">Aristokrat</h3>
-              <p class="proj-desc">Brand identity for a residential complex with a classic architectural feel and a premium, restrained tone.</p>
-              <a href="/projects/aristokrat/" class="proj-link">
-                View project <span class="proj-link-arr">↗︎</span>
+              <p class="proj-desc">Corporate Identity für einen Wohnkomplex mit klassischer Architektur — premium und zurückhaltend im Stil.</p>
+              <a href="/de/projects/aristokrat/" class="proj-link">
+                Projekt ansehen <span class="proj-link-arr">↗︎</span>
               </a>
             </div>
             <div class="proj-img-wrap">
-              <a href="/projects/aristokrat/" class="proj-img-link view-trigger">
-                <img src="images/1_case.jpg" alt="Aristokrat" class="proj-img"/>
+              <a href="/de/projects/aristokrat/" class="proj-img-link view-trigger">
+                <img src="../images/1_case.jpg" alt="Aristokrat" class="proj-img"/>
               </a>
             </div>
           </div>
 
           <div class="proj-card">
             <div class="proj-info">
-              <div class="proj-tags"><span>Brand Identity</span></div>
+              <div class="proj-tags"><span>Corporate Identity</span></div>
               <h3 class="proj-name">Cvetaevsky</h3>
-              <p class="proj-desc">Brand identity for a flower shop and decor studio — built around a symbol that blends a peony, ribbons, and a bouquet into the first letter of the name.</p>
-              <a href="/projects/cvetaevsky/" class="proj-link">
-                View project <span class="proj-link-arr">↗︎</span>
+              <p class="proj-desc">Markenidentität für einen Blumenladen und ein Dekorstudio — das Symbol verbindet Pfingstrose, Bänder und Strauß im ersten Buchstaben des Namens.</p>
+              <a href="/de/projects/cvetaevsky/" class="proj-link">
+                Projekt ansehen <span class="proj-link-arr">↗︎</span>
               </a>
             </div>
             <div class="proj-img-wrap">
-              <a href="/projects/cvetaevsky/" class="proj-img-link view-trigger">
-                <img src="images/2_case.jpg" alt="Cvetaevsky" class="proj-img"/>
+              <a href="/de/projects/cvetaevsky/" class="proj-img-link view-trigger">
+                <img src="../images/2_case.jpg" alt="Cvetaevsky" class="proj-img"/>
               </a>
             </div>
           </div>
@@ -207,30 +192,30 @@
             <div class="proj-info">
               <div class="proj-tags"><span>Interface</span><span>UI/UX</span></div>
               <h3 class="proj-name">FocusFlow</h3>
-              <p class="proj-desc">A concept productivity app that tackles procrastination with structure and honest feedback.</p>
-              <a href="/projects/focusflow/" class="proj-link">
-                View project <span class="proj-link-arr">↗︎</span>
+              <p class="proj-desc">Eine konzeptuelle Produktivitäts-App, die Prokrastination durch Struktur und ehrliches Feedback bekämpft.</p>
+              <a href="/de/projects/focusflow/" class="proj-link">
+                Projekt ansehen <span class="proj-link-arr">↗︎</span>
               </a>
             </div>
             <div class="proj-img-wrap">
-              <a href="/projects/focusflow/" class="proj-img-link view-trigger">
-                <img src="images/3_case.jpg" alt="FocusFlow" class="proj-img"/>
+              <a href="/de/projects/focusflow/" class="proj-img-link view-trigger">
+                <img src="../images/3_case.jpg" alt="FocusFlow" class="proj-img"/>
               </a>
             </div>
           </div>
 
           <div class="proj-card">
             <div class="proj-info">
-              <div class="proj-tags"><span>Editorial design</span><span>Print</span></div>
-              <h3 class="proj-name">Crimean Magazine</h3>
-              <p class="proj-desc">Editorial layout and production for a magazine covering tourism, history, people, food, and business.</p>
-              <a href="/projects/magazine/" class="proj-link">
-                View project <span class="proj-link-arr">↗︎</span>
+              <div class="proj-tags"><span>Editorial Design</span><span>Print</span></div>
+              <h3 class="proj-name">Krim Magazin</h3>
+              <p class="proj-desc">Redaktionelles Layout und Produktion für ein Magazin über Tourismus, Geschichte, Menschen, Essen und Wirtschaft.</p>
+              <a href="/de/projects/magazine/" class="proj-link">
+                Projekt ansehen <span class="proj-link-arr">↗︎</span>
               </a>
             </div>
             <div class="proj-img-wrap">
-              <a href="/projects/magazine/" class="proj-img-link view-trigger">
-                <img src="images/4_case.jpg" alt="Crimean Magazine" class="proj-img"/>
+              <a href="/de/projects/magazine/" class="proj-img-link view-trigger">
+                <img src="../images/4_case.jpg" alt="Krim Magazin" class="proj-img"/>
               </a>
             </div>
           </div>
@@ -239,7 +224,7 @@
       </div>
 
       <div class="proj-hint" id="proj-hint">
-        <span>Scroll to explore</span>
+        <span>Scrollen zum Entdecken</span>
         <svg width="40" height="10" viewBox="0 0 40 10" fill="none">
           <path d="M0 5h38M34 1l4 4-4 4" stroke="#4B6CF7" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
@@ -251,29 +236,29 @@
 
 <!-- CONTACT -->
 <section id="contact">
-  <p class="ct-tag sr">THANK YOU FOR VISITING</p>
+  <p class="ct-tag sr">DANKE FÜR IHREN BESUCH</p>
   <div class="ct-gif sr d1">
-    <img src="images/heart_animation.gif" alt="" width="90"/>
+    <img src="../images/heart_animation.gif" alt="" width="90"/>
   </div>
   <div class="ct-h sr d2">
-    Get in touch
-    <em>with me</em>
+    Schreiben Sie
+    <em>mir</em>
   </div>
   <a href="mailto:hello@rsln.im" class="ct-email sr d3">hello@rsln.im</a>
   <div class="ct-socials sr d4">
-    <a href="https://www.behance.net/rsln" target="_blank" class="ct-soc"><img src="images/behance.svg" width="18" alt="Behance"/></a>
-    <a href="https://www.instagram.com/rsln.im/" target="_blank" class="ct-soc"><img src="images/instagram.svg" width="18" alt="Instagram"/></a>
-    <a href="https://www.linkedin.com/in/ruslan-nalbantov/" target="_blank" class="ct-soc"><img src="images/linkedin.svg" width="18" alt="LinkedIn"/></a>
+    <a href="https://www.behance.net/rsln" target="_blank" class="ct-soc"><img src="../images/behance.svg" width="18" alt="Behance"/></a>
+    <a href="https://www.instagram.com/rsln.im/" target="_blank" class="ct-soc"><img src="../images/instagram.svg" width="18" alt="Instagram"/></a>
+    <a href="https://www.linkedin.com/in/ruslan-nalbantov/" target="_blank" class="ct-soc"><img src="../images/linkedin.svg" width="18" alt="LinkedIn"/></a>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
   <p>© 2025 Ruslan Nalbantov</p>
-  <p>Graphic Designer</p>
+  <p>Grafikdesigner</p>
   <p>rsln.im</p>
 </footer>
 
-<script src="js/scripts.js"></script>
+<script src="../js/scripts.js"></script>
 </body>
 </html>
