@@ -20,15 +20,11 @@
   <script>
     (function () {
       if (localStorage.getItem('rsln_lang') === 'de') { window.location.replace('/de/'); return; }
-      fetch('https://api.country.is/')
-        .then(function (r) { return r.json(); })
-        .then(function (d) {
-          if (d.country === 'DE' || d.country === 'AT' || d.country === 'CH') {
-            localStorage.setItem('rsln_lang', 'de');
-            window.location.replace('/de/');
-          }
-        })
-        .catch(function () {});
+      var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+      if (lang === 'de' || lang.startsWith('de-')) {
+        localStorage.setItem('rsln_lang', 'de');
+        window.location.replace('/de/');
+      }
     })();
   </script>
 </head>
